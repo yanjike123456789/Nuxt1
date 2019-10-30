@@ -13,7 +13,6 @@ export const state = () => ({
       state.userinfo=userinfo;
     }
   }
-  
   // 3 定义 actions 负责异步
   export const actions={
     setUser(context,form){

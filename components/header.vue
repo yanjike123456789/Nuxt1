@@ -28,8 +28,8 @@
       </div>
       <div class="main_login">
         <el-dropdown>
-          <span class="el-dropdown-link">
-            <i class="el-icon-bell"></i> 消息 <i class="el-icon-caret-bottom"></i>
+          <span class="el-dropdown-link" style="cursor:pointer;">
+            <i class="el-icon-bell" ></i> 消息 <i class="el-icon-caret-bottom"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>消息</el-dropdown-item>
@@ -127,9 +127,6 @@ export default {
       &:hover {
         color: #0094ff;
         background-color: #fff;
-        // border-bottom: 5px solid  #0094ff;
-        // currentColor = 当前字体的颜色
-        // border-bottom: 5px solid  currentColor;
         position: relative;
         &::before {
           content: "";
@@ -175,6 +172,7 @@ export default {
     img {
       width: 36px;
     }
+    
     display: flex;
     align-items: center;
   }

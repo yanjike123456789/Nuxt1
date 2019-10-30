@@ -24,24 +24,23 @@ export default {
     };
   },
   methods: {
-    // submitLogin() {
-    //   this.$store.dispatch("user/setUser",this.form).then(res => {
-    //     // console.log(res)
-    //     this.$router.push('/')
-    //     this.$message.success('登入成功')
-    //   });
-    // },          //有点问提
-    submitLogin(){
-      this.$axios.post("/accounts/login",this.form)
-      .then(res=>{
-        if(res.data.token){
+    submitLogin() {
+      this.$store.dispatch("user/setUser",this.form).then(res => {
           this.$router.push('/')
           this.$message.success('登入成功')
-        }else {
-          this.$message.success('登入失败')
-        }
-      })
+      });
     }
+    // submitLogin(){
+    //   this.$axios.post("/accounts/login",this.form)
+    //   .then(res=>{
+    //     if(res.data.token){
+    //       this.$router.push('/')
+    //       this.$message.success('登入成功')
+    //     }else if(res.statusCode===400){
+    //       this.$message.success('登入失败')
+    //     }
+    //   })
+    // }
   }
 }
 </script>
